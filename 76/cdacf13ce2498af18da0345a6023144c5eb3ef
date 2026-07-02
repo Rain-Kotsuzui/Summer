@@ -1,0 +1,23 @@
+robot/visual.py
+  s_749eb097beaa31::t_79753d063a18f8 142,155
+robot/robot_model.py
+  s_749eb097beaa31::t_35de1f568835ed 32,70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "76cdacf13ce2498af18da0345a6023144c5eb3ef",
+  "prompts": {},
+  "sessions": {
+    "s_749eb097beaa31": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a45f975c12d693c7c209802",
+        "model": "gpt-5.4__dev"
+      },
+      "human_author": "sushirui <sushirui@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
