@@ -1,0 +1,26 @@
+robot/main.py
+  s_749eb097beaa31::t_145b6481a7e41b 27,29-33,46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "03e3a903630fed6b8fa9e3804ecd03bfc16835f3",
+  "prompts": {},
+  "humans": {
+    "h_222107e791f028": {
+      "author": "sushirui <sushirui@bytedance.com>"
+    }
+  },
+  "sessions": {
+    "s_749eb097beaa31": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a45f975c12d693c7c209802",
+        "model": "gpt-5.4__dev"
+      },
+      "human_author": "sushirui <sushirui@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
