@@ -1,0 +1,35 @@
+robot/main.py
+  s_749eb097beaa31::t_cd5d44e9b88dd5 9-10,13-17
+  h_222107e791f028 11,18,33-34,39
+  s_749eb097beaa31::t_3f741aa9e4a14b 42
+robot/robot_model.py
+  s_749eb097beaa31::t_35de1f568835ed 9,14-15,22-24,29-30,32-33,39-45,47-76,79-89,93-94,99,107-114,116,119-132,136-142,144,151-162,166-167,173,177-179
+  s_749eb097beaa31::t_9eeaac3c8d77bd 18,25,28,34,46,77-78,90-92,115,143
+robot/visual.py
+  h_222107e791f028 150,152-153
+  s_749eb097beaa31::t_79753d063a18f8 20,102,105,107,114,116-119,149,151,157-162,164-165,167-169,182
+  s_749eb097beaa31::t_931f9ca687df39 128-130,132-133,154-156,163,166
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "08e92fcc3efcfa930bcd69bf0d06b66305d5b1ed",
+  "prompts": {},
+  "humans": {
+    "h_222107e791f028": {
+      "author": "sushirui <sushirui@bytedance.com>"
+    }
+  },
+  "sessions": {
+    "s_749eb097beaa31": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a45f975c12d693c7c209802",
+        "model": "gpt-5.4__dev"
+      },
+      "human_author": "sushirui <sushirui@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
