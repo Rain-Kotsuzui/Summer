@@ -40,7 +40,7 @@ def main():
 
             acc_mask, target_pts_3d, params = vision.process(bgr_img, d_arr)
 
-            raw_apples = segment_and_filter_apples(target_pts_3d, params.norm_angle, params.min_rad, params.max_rad)
+            raw_apples = segment_and_filter_apples(target_pts_3d, params.cur_thresh, params.min_rad, params.max_rad)
 
             confirmed_apples = tracker.update(raw_apples, params.confirm_f, params.lost_f,dt)
             

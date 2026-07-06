@@ -3,7 +3,7 @@ import numpy as np
 from collections import namedtuple
 import config
 
-VisionParams = namedtuple("VisionParams", ["norm_angle","min_rad", "max_rad", "confirm_f", "lost_f"])
+VisionParams = namedtuple("VisionParams", ["cur_thresh","min_rad", "max_rad", "confirm_f", "lost_f"])
 
 class VisionProcessor:
     def __init__(self):
@@ -27,7 +27,7 @@ class VisionProcessor:
 
 
         cv2.createTrackbar("Time Win", self.window_name, config.UI_DEF_TIME_WIN, 15, lambda x: None)   
-        cv2.createTrackbar("Norm Angle", self.window_name, config.UI_DEF_NORM_ANGLE, 30, lambda x: None) 
+        cv2.createTrackbar("Curvature Thresh*100", self.window_name, 10, 12, lambda x: None) 
         cv2.createTrackbar("Min Rad", self.window_name, config.UI_DEF_MIN_RAD, config.UI_DEF_MAX_RAD, lambda x: None)
         cv2.createTrackbar("Max Rad", self.window_name, 40, config.UI_DEF_MAX_RAD, lambda x: None)
         cv2.createTrackbar("Confirm Frm", self.window_name, config.UI_DEF_CONFIRM_FRM, 20, lambda x: None)
@@ -52,7 +52,7 @@ class VisionProcessor:
 
         time_win = max(1, cv2.getTrackbarPos("Time Win", self.window_name))
         
-        norm_angle = cv2.getTrackbarPos("Norm Angle", self.window_name)
+        cur_thresh = cv2.getTrackbarPos("Curvature Thresh*100", self.window_name)/100.0
         
         min_rad = cv2.getTrackbarPos("Min Rad", self.window_name) / 1000.0
         max_rad = cv2.getTrackbarPos("Max Rad", self.window_name) / 1000.0
@@ -128,5 +128,5 @@ class VisionProcessor:
                 y_v = -(y_idx[valid_obj] - config.CY) * z_v / config.FY
                 target_pts_3d = np.stack((x_v, y_v, z_v), axis=-1)
 
-        params = VisionParams(norm_angle,min_rad, max_rad, confirm_f, lost_f)
+        params = VisionParams(cur_thresh,min_rad, max_rad, confirm_f, lost_f)
         return acc_mask, target_pts_3d, params
